@@ -1,8 +1,8 @@
 -- ============================================================
 -- DANE TESTOWE
--- Klienci: ID 6–25 (20 rekordów)
--- Produkty: ID 6–25 (20 rekordów)
--- Zamówienia: ID 6–145 (140 rekordów)
+-- Klienci: ID 1-20(20 rekordów)
+-- Produkty: ID 1-20 (20 rekordów)
+-- Zamówienia: ID 1-140 (140 rekordów)
 -- ============================================================
 
 -- ============================================================
@@ -59,6 +59,11 @@ INSERT INTO products (name, category, price, stock_qty) VALUES
 -- ZAMÓWIENIA
 -- ============================================================
 INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
+    (11, 'completed', 4199.00, NOW() - INTERVAL '96 days'),    -- 1
+    (12, 'completed', 6499.00, NOW() - INTERVAL '84 days'),    -- 2
+    (13, 'completed',  549.00, NOW() - INTERVAL '98 days'),    -- 3
+    (14, 'completed', 3799.00, NOW() - INTERVAL '87 days'),    -- 4
+    (15, 'completed', 8998.00, NOW() - INTERVAL '94 days'),    -- 5
     ( 6, 'completed',  5499.00, NOW() - INTERVAL '90 days'),    -- 6
     ( 6, 'completed',  1799.00, NOW() - INTERVAL '20 days'),    -- 7
     ( 7, 'pending',    7299.00, NOW() - INTERVAL '1 day'),      -- 8
@@ -168,7 +173,7 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     (17, 'completed',  4199.00, NOW() - INTERVAL '28 days'),    -- 112
     (18, 'completed',  1499.00, NOW() - INTERVAL '11 days'),    -- 113
     (19, 'cancelled',  6499.00, NOW() - INTERVAL '103 days'),   -- 114
-    (20, 'completed',  2199.00, NOW() - INTERVAL '20 days');    -- 115
+    (20, 'completed',  2199.00, NOW() - INTERVAL '20 days'),    -- 115
     ( 1, 'completed', 5499.00, NOW() - INTERVAL '180 days'),   -- 116
     ( 2, 'completed', 7299.00, NOW() - INTERVAL '185 days'),   -- 117
     ( 3, 'completed', 2199.00, NOW() - INTERVAL '170 days'),   -- 118
@@ -193,17 +198,17 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     ( 7, 'completed', 3299.00, NOW() - INTERVAL '91 days'),    -- 137
     ( 8, 'completed', 5999.00, NOW() - INTERVAL '86 days'),    -- 138
     ( 9, 'completed', 2799.00, NOW() - INTERVAL '93 days'),    -- 139
-    (10, 'completed', 1499.00, NOW() - INTERVAL '89 days'),    -- 140
-    (11, 'completed', 4199.00, NOW() - INTERVAL '96 days'),    -- 141
-    (12, 'completed', 6499.00, NOW() - INTERVAL '84 days'),    -- 142
-    (13, 'completed',  549.00, NOW() - INTERVAL '98 days'),    -- 143
-    (14, 'completed', 3799.00, NOW() - INTERVAL '87 days'),    -- 144
-    (15, 'completed', 8998.00, NOW() - INTERVAL '94 days');    -- 145
+    (10, 'completed', 1499.00, NOW() - INTERVAL '89 days');    -- 140
 
 -- ============================================================
 -- POZYCJE ZAMÓWIEŃ
 -- ============================================================
 INSERT INTO order_items (order_id, product_id, qty, unit_price) VALUES
+    (1, 24, 1, 4199.00),
+    (2, 21, 1, 6499.00),
+    (3, 11, 1,  549.00),
+    (4,  4, 1, 3799.00),
+    (5, 16, 1, 8998.00),
     ( 6,  6, 1, 5499.00),
     ( 7,  7, 1, 1799.00),
     ( 8,  8, 1, 7299.00),
@@ -327,7 +332,7 @@ INSERT INTO order_items (order_id, product_id, qty, unit_price) VALUES
     (112, 24, 1, 4199.00),
     (113, 15, 1, 1499.00),
     (114, 21, 1, 6499.00),
-    (115,  9, 1, 2199.00);
+    (115,  9, 1, 2199.00),
     (116,  6, 1, 5499.00),
     (117,  8, 1, 7299.00),
     (118,  9, 1, 2199.00),
@@ -352,9 +357,4 @@ INSERT INTO order_items (order_id, product_id, qty, unit_price) VALUES
     (137, 17, 1, 3299.00),
     (138, 18, 1, 5999.00),
     (139, 19, 1, 2799.00),
-    (140, 15, 1, 1499.00),
-    (141, 24, 1, 4199.00),
-    (142, 21, 1, 6499.00),
-    (143, 11, 1,  549.00),
-    (144,  4, 1, 3799.00),
-    (145, 16, 1, 8998.00);
+    (140, 15, 1, 1499.00);

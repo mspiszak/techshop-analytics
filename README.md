@@ -54,7 +54,7 @@ Dwuczęściowa analiza RFM (Recency, Frequency, Monetary):
 - **Część B** — podsumowanie segmentów: liczba klientów, średni CLV, średnia liczba zamówień i łączny przychód per segment
 
 ### Zrzut ekranu wyniku 05_rfm_segmentation.sql:
-
+<img width="912" height="210" alt="image" src="https://github.com/user-attachments/assets/a31381ff-12f2-4a0d-8574-0aba0aa9d875" />
 
 ---
 

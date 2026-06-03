@@ -94,16 +94,16 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     (19, 'completed',   549.00, NOW() - INTERVAL '38 days'),    -- 33
     (20, 'completed',  6498.00, NOW() - INTERVAL '48 days'),    -- 34
     (20, 'completed',  1699.00, NOW() - INTERVAL '9 days'),     -- 35
-    (21, 'cancelled',  4299.00, NOW() - INTERVAL '55 days'),    -- 36
-    (21, 'completed',  2248.00, NOW() - INTERVAL '17 days'),    -- 37
-    (22, 'completed',  7298.00, NOW() - INTERVAL '42 days'),    -- 38
-    (22, 'pending',    3499.00, NOW() - INTERVAL '2 days'),     -- 39
-    (23, 'completed',  5999.00, NOW() - INTERVAL '30 days'),    -- 40
-    (23, 'completed',  1499.00, NOW() - INTERVAL '7 days'),     -- 41
-    (24, 'refunded',   8999.00, NOW() - INTERVAL '85 days'),    -- 42
-    (24, 'completed',  2799.00, NOW() - INTERVAL '23 days'),    -- 43
-    (25, 'pending',    4198.00, NOW() - INTERVAL '3 days'),     -- 44
-    (25, 'completed',   699.00, NOW() - INTERVAL '14 days'),    -- 45
+    (1, 'cancelled',  4299.00, NOW() - INTERVAL '55 days'),    -- 36
+    (1, 'completed',  2248.00, NOW() - INTERVAL '17 days'),    -- 37
+    (2, 'completed',  7298.00, NOW() - INTERVAL '42 days'),    -- 38
+    (2, 'pending',    3499.00, NOW() - INTERVAL '2 days'),     -- 39
+    (3, 'completed',  5999.00, NOW() - INTERVAL '30 days'),    -- 40
+    (3, 'completed',  1499.00, NOW() - INTERVAL '7 days'),     -- 41
+    (4, 'refunded',   8999.00, NOW() - INTERVAL '85 days'),    -- 42
+    (4, 'completed',  2799.00, NOW() - INTERVAL '23 days'),    -- 43
+    (5, 'pending',    4198.00, NOW() - INTERVAL '3 days'),     -- 44
+    (5, 'completed',   699.00, NOW() - INTERVAL '14 days'),    -- 45
     ( 1, 'completed',  4299.00, NOW() - INTERVAL '5 days'),     -- 46
     ( 2, 'completed',  2199.00, NOW() - INTERVAL '110 days'),   -- 47
     ( 3, 'pending',    1799.00, NOW() - INTERVAL '1 day'),      -- 48
@@ -129,11 +129,11 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     (18, 'cancelled',  8999.00, NOW() - INTERVAL '105 days'),   -- 68
     (19, 'completed',  2199.00, NOW() - INTERVAL '13 days'),    -- 69
     (20, 'completed',  5499.00, NOW() - INTERVAL '29 days'),    -- 70
-    (21, 'pending',    3799.00, NOW() - INTERVAL '2 days'),     -- 71
-    (22, 'completed',   699.00, NOW() - INTERVAL '62 days'),    -- 72
-    (23, 'refunded',   4999.00, NOW() - INTERVAL '77 days'),    -- 73
-    (24, 'completed',  1799.00, NOW() - INTERVAL '8 days'),     -- 74
-    (25, 'completed',  7299.00, NOW() - INTERVAL '41 days'),    -- 75
+    ( 1, 'pending',    3799.00, NOW() - INTERVAL '2 days'),     -- 71
+    ( 2, 'completed',   699.00, NOW() - INTERVAL '62 days'),    -- 72
+    ( 3, 'refunded',   4999.00, NOW() - INTERVAL '77 days'),    -- 73
+    ( 4, 'completed',  1799.00, NOW() - INTERVAL '8 days'),     -- 74
+    ( 5, 'completed',  7299.00, NOW() - INTERVAL '41 days'),    -- 75
     ( 6, 'completed',  2799.00, NOW() - INTERVAL '53 days'),    -- 76
     ( 7, 'pending',    5499.00, NOW() - INTERVAL '1 day'),      -- 77
     ( 8, 'completed',  1499.00, NOW() - INTERVAL '37 days'),    -- 78
@@ -149,11 +149,11 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     (18, 'completed',  4198.00, NOW() - INTERVAL '18 days'),    -- 88
     (19, 'pending',    2799.00, NOW() - INTERVAL '2 days'),     -- 89
     (20, 'completed',   549.00, NOW() - INTERVAL '43 days'),    -- 90
-    (21, 'completed',  5999.00, NOW() - INTERVAL '26 days'),    -- 91
-    (22, 'refunded',   1799.00, NOW() - INTERVAL '74 days'),    -- 92
-    (23, 'completed',  3299.00, NOW() - INTERVAL '10 days'),    -- 93
-    (24, 'pending',    4999.00, NOW() - INTERVAL '1 day'),      -- 94
-    (25, 'completed',  2199.00, NOW() - INTERVAL '49 days'),    -- 95
+    (1, 'completed',  5999.00, NOW() - INTERVAL '26 days'),    -- 91
+    (2, 'refunded',   1799.00, NOW() - INTERVAL '74 days'),    -- 92
+    (3, 'completed',  3299.00, NOW() - INTERVAL '10 days'),    -- 93
+    (4, 'pending',    4999.00, NOW() - INTERVAL '1 day'),      -- 94
+    (5, 'completed',  2199.00, NOW() - INTERVAL '49 days'),    -- 95
     ( 1, 'completed',  6499.00, NOW() - INTERVAL '34 days'),    -- 96
     ( 2, 'cancelled',  1599.00, NOW() - INTERVAL '115 days'),   -- 97
     ( 3, 'completed',  4199.00, NOW() - INTERVAL '22 days'),    -- 98

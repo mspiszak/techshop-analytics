@@ -2,8 +2,7 @@
 -- DANE TESTOWE
 -- Klienci: ID 6–25 (20 rekordów)
 -- Produkty: ID 6–25 (20 rekordów)
--- Zamówienia: ID 6–115 (110 rekordów)
--- Pozycje zamówień: ~190 rekordów
+-- Zamówienia: ID 6–145 (140 rekordów)
 -- ============================================================
 
 -- ============================================================
@@ -170,242 +169,192 @@ INSERT INTO orders (customer_id, status, total_amount, ordered_at) VALUES
     (18, 'completed',  1499.00, NOW() - INTERVAL '11 days'),    -- 113
     (19, 'cancelled',  6499.00, NOW() - INTERVAL '103 days'),   -- 114
     (20, 'completed',  2199.00, NOW() - INTERVAL '20 days');    -- 115
+    ( 1, 'completed', 5499.00, NOW() - INTERVAL '180 days'),   -- 116
+    ( 2, 'completed', 7299.00, NOW() - INTERVAL '185 days'),   -- 117
+    ( 3, 'completed', 2199.00, NOW() - INTERVAL '170 days'),   -- 118
+    ( 4, 'completed', 8999.00, NOW() - INTERVAL '175 days'),   -- 119
+    ( 5, 'completed', 1799.00, NOW() - INTERVAL '160 days'),   -- 120
+    ( 6, 'completed', 3499.00, NOW() - INTERVAL '190 days'),   -- 121
+    ( 7, 'completed', 5999.00, NOW() - INTERVAL '165 days'),   -- 122
+    ( 8, 'completed', 2799.00, NOW() - INTERVAL '178 days'),   -- 123
+    ( 9, 'completed', 1499.00, NOW() - INTERVAL '172 days'),   -- 124
+    (10, 'completed', 4199.00, NOW() - INTERVAL '168 days'),   -- 125
+    (11, 'completed', 6499.00, NOW() - INTERVAL '183 days'),   -- 126
+    (12, 'completed',  699.00, NOW() - INTERVAL '162 days'),   -- 127
+    (13, 'completed', 3299.00, NOW() - INTERVAL '176 days'),   -- 128
+    (14, 'completed', 5299.00, NOW() - INTERVAL '188 days'),   -- 129
+    (15, 'completed', 1699.00, NOW() - INTERVAL '158 days'),   -- 130
+    ( 1, 'completed', 8999.00, NOW() - INTERVAL '95 days'),    -- 131
+    ( 2, 'completed', 2199.00, NOW() - INTERVAL '100 days'),   -- 132
+    ( 3, 'completed', 5499.00, NOW() - INTERVAL '88 days'),    -- 133
+    ( 4, 'completed', 1799.00, NOW() - INTERVAL '92 days'),    -- 134
+    ( 5, 'completed', 4299.00, NOW() - INTERVAL '85 days'),    -- 135
+    ( 6, 'completed', 7299.00, NOW() - INTERVAL '97 days'),    -- 136
+    ( 7, 'completed', 3299.00, NOW() - INTERVAL '91 days'),    -- 137
+    ( 8, 'completed', 5999.00, NOW() - INTERVAL '86 days'),    -- 138
+    ( 9, 'completed', 2799.00, NOW() - INTERVAL '93 days'),    -- 139
+    (10, 'completed', 1499.00, NOW() - INTERVAL '89 days'),    -- 140
+    (11, 'completed', 4199.00, NOW() - INTERVAL '96 days'),    -- 141
+    (12, 'completed', 6499.00, NOW() - INTERVAL '84 days'),    -- 142
+    (13, 'completed',  549.00, NOW() - INTERVAL '98 days'),    -- 143
+    (14, 'completed', 3799.00, NOW() - INTERVAL '87 days'),    -- 144
+    (15, 'completed', 8998.00, NOW() - INTERVAL '94 days');    -- 145
 
 -- ============================================================
 -- POZYCJE ZAMÓWIEŃ
 -- ============================================================
 INSERT INTO order_items (order_id, product_id, qty, unit_price) VALUES
-    -- Zamówienie 6: iPad Pro 12.9
     ( 6,  6, 1, 5499.00),
-    -- Zamówienie 7: Sony WH-1000XM5
     ( 7,  7, 1, 1799.00),
-    -- Zamówienie 8: Dell XPS 15
     ( 8,  8, 1, 7299.00),
-    -- Zamówienie 9: Apple Watch Series 9
     ( 9,  9, 1, 2199.00),
-    -- Zamówienie 10: Kindle Paperwhite (anulowane)
     (10, 10, 1,  699.00),
-    -- Zamówienie 11: iPad Pro 12.9 + Logitech MX Keys
     (11,  6, 1, 5499.00),
     (11, 11, 1,  549.00),
-    -- Zamówienie 12: Samsung Galaxy Tab S9
     (12, 12, 1, 3499.00),
-    -- Zamówienie 13: GoPro Hero 12
     (13, 13, 1, 2199.00),
-    -- Zamówienie 14: Lenovo ThinkPad X1
     (14, 16, 1, 8999.00),
-    -- Zamówienie 15: Nintendo Switch OLED (zwrot)
     (15, 14, 1, 1599.00),
-    -- Zamówienie 16: Sony WH-1000XM5 x2
     (16,  7, 2, 1799.00),
-    -- Zamówienie 17: DJI Mini 4 Pro
     (17, 18, 1, 5999.00),
-    -- Zamówienie 18: PlayStation 5
     (18, 19, 1, 2799.00),
-    -- Zamówienie 19: Bose QuietComfort 45 + Samsung T7 Shield
     (19, 15, 1, 1499.00),
     (19, 25, 1,  699.00),
-    -- Zamówienie 20: Xiaomi 14 Pro (anulowane)
     (20, 22, 1, 4299.00),
-    -- Zamówienie 21: Huawei MateBook X Pro + Logitech MX Keys
     (21, 21, 1, 6499.00),
     (21, 11, 1,  549.00),
-    -- Zamówienie 22: GoPro Hero 12
     (22, 13, 1, 2199.00),
-    -- Zamówienie 23: Kindle Paperwhite
     (23, 10, 1,  699.00),
-    -- Zamówienie 24: ASUS ROG Phone 8 + Jabra Evolve2 85
     (24, 23, 1, 5299.00),
     (24, 20, 1, 1699.00),
-    -- Zamówienie 25: Garmin Fenix 7
     (25, 17, 1, 3299.00),
-    -- Zamówienie 26: Lenovo ThinkPad X1
     (26, 16, 1, 8999.00),
-    -- Zamówienie 27: Sony WH-1000XM5
     (27,  7, 1, 1799.00),
-    -- Zamówienie 28: iPad Pro 12.9
     (28,  6, 1, 5499.00),
-    -- Zamówienie 29: GoPro Hero 12 (anulowane)
     (29, 13, 1, 2199.00),
-    -- Zamówienie 30: Samsung Galaxy Tab S9 + Logitech MX Keys
     (30, 12, 1, 3499.00),
     (30, 11, 1,  549.00),
-    -- Zamówienie 31: PlayStation 5 (zwrot)
     (31, 19, 1, 2799.00),
-    -- Zamówienie 32: DJI Mini 4 Pro
     (32, 18, 1, 5999.00),
-    -- Zamówienie 33: Logitech MX Keys
     (33, 11, 1,  549.00),
-    -- Zamówienie 34: Huawei MateBook X Pro + Jabra Evolve2 85
     (34, 21, 1, 6499.00),
     (34, 20, 1, 1699.00),
-    -- Zamówienie 35: Jabra Evolve2 85
     (35, 20, 1, 1699.00),
-    -- Zamówienie 36: Xiaomi 14 Pro (anulowane)
     (36, 22, 1, 4299.00),
-    -- Zamówienie 37: Apple Watch Series 9 + Logitech MX Keys
     (37,  9, 1, 2199.00),
     (37, 11, 1,  549.00),
-    -- Zamówienie 38: Dell XPS 15 + Samsung T7 Shield
     (38,  8, 1, 7299.00),
     (38, 25, 1,  699.00),
-    -- Zamówienie 39: Samsung Galaxy Tab S9
     (39, 12, 1, 3499.00),
-    -- Zamówienie 40: DJI Mini 4 Pro
     (40, 18, 1, 5999.00),
-    -- Zamówienie 41: Bose QuietComfort 45
     (41, 15, 1, 1499.00),
-    -- Zamówienie 42: Lenovo ThinkPad X1 (zwrot)
     (42, 16, 1, 8999.00),
-    -- Zamówienie 43: PlayStation 5
     (43, 19, 1, 2799.00),
-    -- Zamówienie 44: Canon EOS R50 + Samsung T7 Shield
     (44, 24, 1, 4199.00),
     (44, 25, 1,  699.00),
-    -- Zamówienie 45: Samsung T7 Shield 2TB
     (45, 25, 1,  699.00),
-    -- Zamówienie 46: Xiaomi 14 Pro
     (46, 22, 1, 4299.00),
-    -- Zamówienie 47: Apple Watch Series 9
     (47,  9, 1, 2199.00),
-    -- Zamówienie 48: Sony WH-1000XM5
     (48,  7, 1, 1799.00),
-    -- Zamówienie 49: Samsung Galaxy Tab S9
     (49, 12, 1, 3499.00),
-    -- Zamówienie 50: Lenovo ThinkPad X1
     (50, 16, 1, 8999.00),
-    -- Zamówienie 51: PlayStation 5 (anulowane)
     (51, 19, 1, 2799.00),
-    -- Zamówienie 52: iPad Pro 12.9 (zwrot)
     (52,  6, 1, 5499.00),
-    -- Zamówienie 53: Kindle Paperwhite
     (53, 10, 1,  699.00),
-    -- Zamówienie 54: Dell XPS 15
     (54,  8, 1, 7299.00),
-    -- Zamówienie 55: Bose QuietComfort 45
     (55, 15, 1, 1499.00),
-    -- Zamówienie 56: ASUS ROG Phone 8
     (56, 23, 1, 5299.00),
-    -- Zamówienie 57: Garmin Fenix 7 (anulowane)
     (57, 17, 1, 3299.00),
-    -- Zamówienie 58: PlayStation 5
     (58, 19, 1, 2799.00),
-    -- Zamówienie 59: Huawei MateBook X Pro
     (59, 21, 1, 6499.00),
-    -- Zamówienie 60: Canon EOS R50
     (60, 24, 1, 4199.00),
-    -- Zamówienie 61: Jabra Evolve2 85
     (61, 20, 1, 1699.00),
-    -- Zamówienie 62: DJI Mini 4 Pro (zwrot)
     (62, 18, 1, 5999.00),
-    -- Zamówienie 63: Logitech MX Keys
     (63, 11, 1,  549.00),
-    -- Zamówienie 64: Samsung Galaxy S24
     (64,  4, 1, 3799.00),
-    -- Zamówienie 65: Apple Watch Series 9
     (65,  9, 1, 2199.00),
-    -- Zamówienie 66: iPhone 15 Pro
     (66,  1, 1, 4999.00),
-    -- Zamówienie 67: AirPods Pro
     (67,  3, 1,  999.00),
-    -- Zamówienie 68: Lenovo ThinkPad X1 (anulowane)
     (68, 16, 1, 8999.00),
-    -- Zamówienie 69: Apple Watch Series 9
     (69,  9, 1, 2199.00),
-    -- Zamówienie 70: iPad Pro 12.9
     (70,  6, 1, 5499.00),
-    -- Zamówienie 71: Samsung Galaxy S24
     (71,  4, 1, 3799.00),
-    -- Zamówienie 72: Kindle Paperwhite
     (72, 10, 1,  699.00),
-    -- Zamówienie 73: iPhone 15 Pro (zwrot)
     (73,  1, 1, 4999.00),
-    -- Zamówienie 74: Sony WH-1000XM5
     (74,  7, 1, 1799.00),
-    -- Zamówienie 75: Dell XPS 15
     (75,  8, 1, 7299.00),
-    -- Zamówienie 76: PlayStation 5
     (76, 19, 1, 2799.00),
-    -- Zamówienie 77: iPad Pro 12.9
     (77,  6, 1, 5499.00),
-    -- Zamówienie 78: Bose QuietComfort 45
     (78, 15, 1, 1499.00),
-    -- Zamówienie 79: Garmin Fenix 7 (anulowane)
     (79, 17, 1, 3299.00),
-    -- Zamówienie 80: Huawei MateBook X Pro + Samsung T7 Shield
     (80, 21, 1, 6499.00),
     (80, 25, 1,  699.00),
-    -- Zamówienie 81: AirPods Pro
     (81,  3, 1,  999.00),
-    -- Zamówienie 82: Xiaomi 14 Pro
     (82, 22, 1, 4299.00),
-    -- Zamówienie 83: Apple Watch Series 9
     (83,  9, 1, 2199.00),
-    -- Zamówienie 84: DJI Mini 4 Pro (zwrot)
     (84, 18, 1, 5999.00),
-    -- Zamówienie 85: Lenovo ThinkPad X1 + Samsung T7 Shield
     (85, 16, 1, 8999.00),
     (85, 25, 1,  699.00),
-    -- Zamówienie 86: Jabra Evolve2 85
     (86, 20, 1, 1699.00),
-    -- Zamówienie 87: Samsung Galaxy Tab S9 (anulowane)
     (87, 12, 1, 3499.00),
-    -- Zamówienie 88: Canon EOS R50 + Samsung T7 Shield
     (88, 24, 1, 4199.00),
     (88, 25, 1,  699.00),
-    -- Zamówienie 89: PlayStation 5
     (89, 19, 1, 2799.00),
-    -- Zamówienie 90: Logitech MX Keys
     (90, 11, 1,  549.00),
-    -- Zamówienie 91: DJI Mini 4 Pro
     (91, 18, 1, 5999.00),
-    -- Zamówienie 92: Sony WH-1000XM5 (zwrot)
     (92,  7, 1, 1799.00),
-    -- Zamówienie 93: Garmin Fenix 7
     (93, 17, 1, 3299.00),
-    -- Zamówienie 94: iPhone 15 Pro
     (94,  1, 1, 4999.00),
-    -- Zamówienie 95: Apple Watch Series 9
     (95,  9, 1, 2199.00),
-    -- Zamówienie 96: Huawei MateBook X Pro
     (96, 21, 1, 6499.00),
-    -- Zamówienie 97: Nintendo Switch OLED (anulowane)
     (97, 14, 1, 1599.00),
-    -- Zamówienie 98: Canon EOS R50
     (98, 24, 1, 4199.00),
-    -- Zamówienie 99: ASUS ROG Phone 8
     (99, 23, 1, 5299.00),
-    -- Zamówienie 100: Samsung T7 Shield
     (100, 25, 1,  699.00),
-    -- Zamówienie 101: Samsung Galaxy S24
     (101,  4, 1, 3799.00),
-    -- Zamówienie 102: Lenovo ThinkPad X1 (zwrot)
     (102, 16, 1, 8999.00),
-    -- Zamówienie 103: Apple Watch Series 9 + Logitech MX Keys
     (103,  9, 1, 2199.00),
     (103, 11, 1,  549.00),
-    -- Zamówienie 104: iPad Pro 12.9
     (104,  6, 1, 5499.00),
-    -- Zamówienie 105: Sony WH-1000XM5
     (105,  7, 1, 1799.00),
-    -- Zamówienie 106: iPhone 15 Pro (anulowane)
     (106,  1, 1, 4999.00),
-    -- Zamówienie 107: Sony WH-1000XM5 x2
     (107,  7, 2, 1799.00),
-    -- Zamówienie 108: Dell XPS 15 + Samsung T7 Shield
     (108,  8, 1, 7299.00),
     (108, 25, 1,  699.00),
-    -- Zamówienie 109: PlayStation 5
     (109, 19, 1, 2799.00),
-    -- Zamówienie 110: AirPods Pro
     (110,  3, 1,  999.00),
-    -- Zamówienie 111: ASUS ROG Phone 8 (zwrot)
     (111, 23, 1, 5299.00),
-    -- Zamówienie 112: Canon EOS R50
     (112, 24, 1, 4199.00),
-    -- Zamówienie 113: Bose QuietComfort 45
     (113, 15, 1, 1499.00),
-    -- Zamówienie 114: Huawei MateBook X Pro (anulowane)
     (114, 21, 1, 6499.00),
-    -- Zamówienie 115: Apple Watch Series 9
     (115,  9, 1, 2199.00);
+    (116,  6, 1, 5499.00),
+    (117,  8, 1, 7299.00),
+    (118,  9, 1, 2199.00),
+    (119, 16, 1, 8999.00),
+    (120,  7, 1, 1799.00),
+    (121, 12, 1, 3499.00),
+    (122, 18, 1, 5999.00),
+    (123, 19, 1, 2799.00),
+    (124, 15, 1, 1499.00),
+    (125, 24, 1, 4199.00),
+    (126, 21, 1, 6499.00),
+    (127, 10, 1,  699.00),
+    (128, 17, 1, 3299.00),
+    (129, 23, 1, 5299.00),
+    (130, 20, 1, 1699.00),
+    (131, 16, 1, 8999.00),
+    (132,  9, 1, 2199.00),
+    (133,  6, 1, 5499.00),
+    (134,  7, 1, 1799.00),
+    (135, 22, 1, 4299.00),
+    (136,  8, 1, 7299.00),
+    (137, 17, 1, 3299.00),
+    (138, 18, 1, 5999.00),
+    (139, 19, 1, 2799.00),
+    (140, 15, 1, 1499.00),
+    (141, 24, 1, 4199.00),
+    (142, 21, 1, 6499.00),
+    (143, 11, 1,  549.00),
+    (144,  4, 1, 3799.00),
+    (145, 16, 1, 8998.00);
